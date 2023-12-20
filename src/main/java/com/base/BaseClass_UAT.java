@@ -47,6 +47,7 @@ public class BaseClass_UAT {
 		}
 
 		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
 		driver.get(PropertyUtils.readProperties("Url"));
 
 	}

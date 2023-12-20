@@ -80,7 +80,7 @@ public class TwoWheeler_UAT extends BaseClass_UAT {
 	@FindBy(xpath = "//*[text()='Information is accurate']")
 	WebElement information_is_accurate;
 	
-	@FindBy(xpath = "//*[text()='₹ 2,423']") //cp + NE 1,292/tp + NE 1,089/OD 407
+	@FindBy(xpath = "//*[text()='₹ 2,621']") //cp + NE 1,292/tp + NE 1,089/OD 407
 	WebElement quotes;    //cp+br 1,402 cp + <90 1,292/ cp + <90 1,339
 	
 	@FindBy(xpath = "//*[@ng-click='closeModel(true)']")
@@ -359,7 +359,7 @@ public class TwoWheeler_UAT extends BaseClass_UAT {
 		sendtext(pancard_number,panNum);
 		sendtext(first_Name,fname );
 		sendtext(last_Name,lname);
-		sendtext(mobile_Number, mob);
+		sendtext(mobile_Number, generateRandomMobileNumber());
 		sendtext(email, emailId);
 		sendtext(pincode,pin_code);
 		selectFromDropDown(gender);
@@ -395,7 +395,7 @@ public class TwoWheeler_UAT extends BaseClass_UAT {
 		sendtext(address_1, address_one);
 		sendtext(address_2, address_two);
 		sendtext(pincode, pin_code);
-		sendtext(mobile_Number, mobile_no);
+		sendtext(mobile_Number, generateRandomMobileNumber());
 		sendtext(email, email_id);
 		sendtext(state, stateName);
 		selectElementfromInputDropdown(driver,wait.until(ExpectedConditions.visibilityOf(maharashtra)));
@@ -408,7 +408,7 @@ public class TwoWheeler_UAT extends BaseClass_UAT {
 	
 	public void vehicle_Details(String vehicle_no,String engine_no, String chassis_no) {
 		
-		sendtext(vehicle_number, vehicle_no);
+		sendtext(vehicle_number, generateRandomVehicleNumber());
 		sendtext(engine_number, engine_no);
 		sendtext(chassis_number, chassis_no);
 		
@@ -418,7 +418,7 @@ public class TwoWheeler_UAT extends BaseClass_UAT {
 	public void other_Details(String nominee_Name, String Previous_Policy_Number,String previousInsurerState,String previousInsurercity, String previous_PolicyNumber ) {
 		selectFromDropDown(wait.until(ExpectedConditions.visibilityOf(relations)));
 		selectFromDropDown(wait.until(ExpectedConditions.visibilityOf(nomineeGender)));
-		sendtext(nomineeFullName, nominee_Name);
+		sendtext(nomineeFullName, generateRandomName());
 		sendtext(previousPolicyNumber, Previous_Policy_Number);
 		sendtext(previousInsurerState_value, previousInsurerState);
 		selectElementfromInputDropdown(driver, wait.until(ExpectedConditions.visibilityOf(maharashtra)));

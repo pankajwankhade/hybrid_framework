@@ -82,7 +82,7 @@ public class Private_Car_UAT extends BaseClass_UAT {
 	@FindBy(xpath = "//*[text()='Information is accurate']")
 	WebElement information_is_accurate;
 
-	@FindBy(xpath = "//*[text()='₹ 8,431']") //cp + NE 1,292/tp + NE 1,089/OD 407
+	@FindBy(xpath = "//*[text()='₹ 6,791']") //cp + NE 1,292/tp + NE 1,089/OD 407
 	WebElement quotes;    //cp+br 1,402 cp + <90 1,292/ cp + <90 1,339
 
 	@FindBy(xpath = "//*[@ng-click='closeModel(true)']")
